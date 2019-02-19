@@ -5,10 +5,11 @@
 
 trigger:
   branches:
-    include:
+    exclude:
     - master
-
-pr: none
+  paths:
+    include:
+    - ./*.js
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -20,11 +21,18 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    echo $(System.PullRequest.SourceBranch) > $(Build.ArtifactStagingDirectory)/pr_source_branch
+  displayName: 'store branch name to file'
+
+- script: |
     npm install
     npm run lint
+  displayName: 'npm install and lint'
+
+- script: |
     npm test
     CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
-  displayName: 'npm install, test, and lint'
+  displayName: 'test and upload coverage'
 
 - script: |
     SHORT_COMMIT=`echo $(Build.SourceVersion)| cut -c1-7`
