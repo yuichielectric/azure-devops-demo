@@ -15,8 +15,8 @@ var sha = fs.readFileSync('./deploy.sha', 'utf8').trim();
 var server = http.createServer(function (request, response) {
   response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
   const msg = utils.greetings('IronSource');
-  response.write(`${msg}\n\n`);
-  response.write(`Server time: ${new Date(Date.now()).toLocaleString()}\n\n`);
+  response.write(`${msg}\n`);
+  response.write(`Server time: ${new Date(Date.now()).toLocaleString()}\n`);
 
   if (sha.length) {
     response.write(`Deployed SHA: ${sha}`);
