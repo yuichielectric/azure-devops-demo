@@ -1,6 +1,6 @@
-"use strict"
-const appInsights = require("applicationinsights")
-appInsights.setup("5aef94b2-4b8c-4832-a5f0-815d1732f063")
+// "use strict"
+// const appInsights = require("applicationinsights")
+// appInsights.setup("5aef94b2-4b8c-4832-a5f0-815d1732f063")
 // appInsights.start()
 
 // const Sentry = require('@sentry/node');
