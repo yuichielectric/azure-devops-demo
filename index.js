@@ -3,8 +3,8 @@ const appInsights = require("applicationinsights")
 appInsights.setup("5aef94b2-4b8c-4832-a5f0-815d1732f063")
 appInsights.start()
 
-const Sentry = require('@sentry/node');
-Sentry.init({ dsn: 'https://3eac26e32a1f43588dedec57bafd201b@sentry.io/1397223' });
+// const Sentry = require('@sentry/node');
+// Sentry.init({ dsn: 'https://3eac26e32a1f43588dedec57bafd201b@sentry.io/1397223' });
 
 var http = require('http');
 var utils = require('./lib/utils');
