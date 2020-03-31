@@ -15,7 +15,7 @@
     "@sentry/node": "^4.6.1",
     "applicationinsights": "^1.1.0",
     "codecov": "^3.1.0",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.0",
     "nyc": "^13.1.0"
   },
   "devDependencies": {
