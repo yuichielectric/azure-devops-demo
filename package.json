@@ -12,11 +12,11 @@
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "@sentry/node": "^4.6.1",
-    "applicationinsights": "^1.1.0",
-    "codecov": "^3.1.0",
+    "@sentry/node": "^5.11.0",
+    "applicationinsights": "^3.0.0",
+    "codecov": "^3.5.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "nyc": "^17.0.0"
   },
   "devDependencies": {
     "eslint": "5.5.0"
